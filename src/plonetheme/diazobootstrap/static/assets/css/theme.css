@@ -1,0 +1,21 @@
+/* Add additional stylesheets below
+-------------------------------------------------- */
+/*
+  Plone styles with fluid layout
+  Special styles for presenting Plone
+*/
+
+
+
+/* Body and structure
+-------------------------------------------------- */
+
+body {
+  position: relative;
+  padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+  padding-bottom: 40px;
+}
+
+.sidebar-nav {
+padding: 9px 0;
+}

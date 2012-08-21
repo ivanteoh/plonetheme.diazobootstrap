@@ -1,0 +1,22 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="plonetheme.diazobootstrap">
+
+    <includeDependencies package="." />
+
+    <!-- Register the /++theme++plonetheme.diazobootstrap/ static resource directory -->
+    <plone:static directory="static" type="theme" />
+
+    <!-- Register our GenericSetup profile -->
+    <genericsetup:registerProfile
+        name="default"
+        title="Twitter's Bootstrap Based Theme"
+        directory="profiles/default"
+        description="Extension profile for the Twitter's Bootstrap Plone theme."
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+
+</configure>
