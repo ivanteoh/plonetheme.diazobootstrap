@@ -4,4 +4,16 @@
     xmlns:css="http://namespaces.plone.org/diazo/css"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+    <!-- portal-column-one -->
+    <drop css:theme="#portal-column-one" css:if-not-content="#portal-column-one" />
+
+    <!-- portal-column-two -->
+    <drop css:theme="#portal-column-two" css:if-not-content="#portal-column-two" />
+
+    <!-- portal-breadcrumbs -->
+    <replace css:theme-children="#portal-breadcrumbs" css:content-children="#portal-breadcrumbs" />
+
+    <!-- portal-column-content -->
+    <replace css:theme-children="#content" css:content-children="#content" />
+
 </rules>
