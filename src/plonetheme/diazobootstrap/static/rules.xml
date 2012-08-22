@@ -6,8 +6,8 @@
     xmlns:xi="http://www.w3.org/2001/XInclude"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-    <!-- Rules applying to standard Plone pages -->
-    <theme href="++theme++plonetheme.diazobootstrap/theme.html" />
+    <!-- The default theme, used for standard Plone web pages -->
+    <theme href="++theme++plonetheme.diazobootstrap/theme.html" css:if-content="#visual-portal-wrapper" />
 
     <xi:include href="++theme++plonetheme.diazobootstrap/rules-base.xml" />
 
