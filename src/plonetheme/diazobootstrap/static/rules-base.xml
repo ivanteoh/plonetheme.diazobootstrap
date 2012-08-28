@@ -33,6 +33,28 @@
         <!-- Logo (link target) -->
         <copy attributes="href" css:content='#portal-logo' css:theme="#logo" />
 
+        <!-- portal-personaltools -->
+        <replace css:theme-children="#portal-personaltools">
+            <xsl:if test="id('anon-personalbar')">
+                <p class="navbar-text">
+                    <xsl:copy-of select="id('anon-personalbar')/a" />
+                </p>
+            </xsl:if>
+            <xsl:if test="id('user-name')">
+                <div class="btn-group">
+                    <a id="user-name" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#user">
+                        <xsl:value-of select="id('user-name')" />
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" data-no-collapse="true">
+                        <xsl:for-each select="id('portal-personaltools')/dd/ul/li">
+                            <xsl:copy-of select="." />
+                        </xsl:for-each>
+                    </ul>
+                </div>
+            </xsl:if>
+        </replace>
+
         <!-- Site actions -->
         <replace css:content="#portal-siteactions li" css:theme-children="#actions" />
 
@@ -58,5 +80,7 @@
         <drop css:theme="#column-two" css:if-not-content="#portal-column-two" />
 
     </rules>
+
+
 
 </rules>
